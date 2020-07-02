@@ -6,16 +6,21 @@
         <link rel="stylesheet" href="submitProject.css">
         <script src="submitProject.js"></script>
     </head>
-    <body>
+    <body onload = getNewProjectInfo()>
         <form action="/login-status" method="POST"> <!-- this will navigate to our 'login status' server and find the doPost method -->
-        <!--here, the user sends a value to the server-->
-        <p>Say Something:</p>
-        <textarea name="text-input">Add your comment here</textarea>
-        <br/><br/>
-        <input type="submit" />
-        <ul id="come-back"></ul>
-    </form>
-        
+            <!--here, the user sends a value to the server-->
+            <p>Name:</p> <!--here, we get the user's actual name, but on Nana's home page we'll get the userName-->
+            <textarea name="text-input">Add your name here</textarea>
+            <br/><br/>
+            <p>Project Name:</p> <!--here, we get the user's actual name, but on Nana's home page we'll get the userName-->
+            <textarea name="text-input">Add your project name here</textarea>
+            <br/><br/>
+            <p>Project Description:</p> <!--here, we get the user's actual name, but on Nana's home page we'll get the userName-->
+            <textarea name="text-input">Describe your project here</textarea>
+            <br/><br/>
+            <input type="submit"/>
+            <ul id="come-back"></ul> <!--if we want the javascript to print something on the html page, we'll reference this tag-->
+        </form>
 
         <footer id = "footer">
             <h1>"ELIAS RETA"</h1>
