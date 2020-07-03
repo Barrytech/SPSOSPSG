@@ -51,11 +51,11 @@ public class DataServlet extends HttpServlet { //ADD YOUR FUNCTIONS IN HERE
             String projectName = (String) entity.getProperty("projectName");
             String projectDescription = (String) entity.getProperty("projectDescription");
 
-            HashMap<String, String> projectInfo = new HashMap();
+            HashMap<String, String> projectInfo = new HashMap(); //projectInfo is a hashmap with all of the information for one specific project
             projectInfo.put("userName", userName);
             projectInfo.put("projectName", projectName);
             projectInfo.put("projectDescription", projectDescription);
-            projects.add(projectInfo);
+            projects.add(projectInfo); //adding the project to the arraylist with the other projects
         }
         Gson gson = new Gson();
         response.setContentType("application/json;");

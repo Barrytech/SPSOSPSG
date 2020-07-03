@@ -12,13 +12,17 @@ html, body {
   padding-bottom: 100px; /*this is the height of the footer*/
 }
 
+
+
 #main {
   overflow: auto; /*this will give us the scroll bars when more content is on the page*/
 }
 
-#get-name {
-    margin-bottom: 200;
+.new-project-form-fields p {
+    letter-spacing: 1px;
+    color: #000000;
 }
+
 
 .header {
   width: 100%;
@@ -87,10 +91,4 @@ html, body {
   clear: both;
   color: #ffffff;
 
-}
-
-p {
-  letter-spacing: 1px;
-  text-align: center;
-  color: #000000;
 }
