@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="userProfile.css">
+    <script src="userProfile.js"></script>
+  </head>
+
+  <body onload="displayLoginContent(); displayProfileContent();">
+      <h2>Profile</h2>
+      <hr>
+      <button class="button" onclick="" id="login-button-1" style="display:none;">Login</button>
+      
+      <div id="profile-container" class="row" style="display:none;">
+          <div class="column1" style="background-color:#e6e6e6;">
+              <h2>Column 1</h2>
+              <p>profile info..</p>
+              <button class="button" id="edit-button-1"><a href="editProfile.html" class="a1">Edit</a></button>
+              <button class="button" id="logout-button-1"><a id="logout-1-a" href="" class="a1">Logout</a></button>
+              <ul id="profile-info"></ul>
+          </div>
+          <div class="column2" style="background-color:#e6e6e6;">
+            <h2>Column 2</h2>
+            <p>projects info..</p>
+          </div>
+      </div>
+      
+
+  </body>
+</html>

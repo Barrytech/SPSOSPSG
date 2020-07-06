@@ -21,7 +21,7 @@ import java.util.HashMap;
 
 
 @WebServlet("/project-info")
-public class DataServlet extends HttpServlet { //ADD YOUR FUNCTIONS IN HERE
+public class DataServlet extends HttpServlet {
 //
 //ELIAS
     @Override
@@ -43,7 +43,7 @@ public class DataServlet extends HttpServlet { //ADD YOUR FUNCTIONS IN HERE
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         //Going through the database and posting the projects
-        Query query = new Query("Project").addSort("userName", SortDirection.DESCENDING); //allows us to query through all the entities with kind "Project" and Property "userName"
+        Query query = new Query("Project"); //allows us to query through all the entities with kind "Project" and Property "userName"
         PreparedQuery results = datastore.prepare(query); //resuls contains all the entities in Datastore with that kind
         ArrayList<HashMap<String, String>> projects = new ArrayList<>(); //this is an arrayList of HashMaps, each of which contain a specific project's details
         for (Entity entity: results.asIterable()) {

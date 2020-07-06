@@ -1,6 +1,6 @@
 function getNewProjectInfo() {
       const projectInfoPromise = fetch('/project-info').then(response => response.text()); //we're fetching information from the 'project-list' server
-      loginInfoPromise.then((response) => { //fecth() returns a 'promise' object, saying that when the server sends back information, then do "X"
+      projectInfoPromise.then((response) => { //fecth() returns a 'promise' object, saying that when the server sends back information, then do "X"
         let comeBack = document.getElementById('come-back');
         comeBack.innerHTML = "Congrats, your project was posted to the project board!";
         // if (response.includes("Logged in")) { //this is the "X" that happens.  Here, I want to specifically write to the projectList.html file,

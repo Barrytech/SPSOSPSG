@@ -48,10 +48,10 @@
         <version>2.2.0</version>
         <configuration>
           <!-- TODO: set project ID. -->
-          <deploy.projectId>PROJECT-ID</deploy.projectId>
+          <deploy.projectId>summer20-sps-18</deploy.projectId>
           <deploy.version>1</deploy.version>
         </configuration>
       </plugin>
     </plugins>
   </build>
-
+</project>
