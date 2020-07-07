@@ -27,16 +27,16 @@ public class DataServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //response.setContentType("text/html");
-        String userName = request.getParameter("userName"); //request is getting the info from the html through the javascript
-        String projectName = request.getParameter("projectName");
-        String projectDescription = request.getParameter("projectDescription");
+        String userName = request.getParameter("user-name"); //request is getting the info from the html through the javascript
+        String projectName = request.getParameter("project-name"); //the parameters in parentheses correspond to the "name" in the form tag
+        String projectDescription = request.getParameter("project-description");
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         Entity newProjectEntity = new Entity("Project"); //"Project" is the entity 'kind' I'm creating
         newProjectEntity.setProperty("userName", userName); //entity properties have a (key, value), and are stored in datastore
         newProjectEntity.setProperty("projectName", projectName);
         newProjectEntity.setProperty("projectDescription", projectDescription);
         datastore.put(newProjectEntity); //stores the entity
-        response.getWriter().println("Save Successful");
+        response.getWriter().println("Congrats, your project was posted to the project board!");
     }
 
     @Override
