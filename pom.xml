@@ -2,9 +2,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
-  <groupId>com.google.sps</groupId>
-  <artifactId>team-project</artifactId>
+
   <version>1</version>
   <packaging>war</packaging>
 
@@ -25,17 +23,6 @@
     </dependency>
 
     <dependency>
-        <groupId>com.google.code.gson</groupId>
-        <artifactId>gson</artifactId>
-        <version>2.8.6</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.google.appengine</groupId>
-        <artifactId>appengine-api-1.0-sdk</artifactId>
-        <version>1.9.59</version>
-    </dependency>
-   
   </dependencies>
 
   <build>
@@ -48,10 +35,9 @@
         <version>2.2.0</version>
         <configuration>
           <!-- TODO: set project ID. -->
-          <deploy.projectId>PROJECT-ID</deploy.projectId>
           <deploy.version>1</deploy.version>
         </configuration>
       </plugin>
     </plugins>
   </build>
-
+</project>
