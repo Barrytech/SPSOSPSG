@@ -22,13 +22,12 @@ import java.util.HashMap;
 
 @WebServlet("/project-info")
 public class DataServlet extends HttpServlet {
-//
-//ELIAS
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //response.setContentType("text/html");
         String userName = request.getParameter("user-name"); //request is getting the info from the html through the javascript
-        String projectName = request.getParameter("project-name"); //the parameters in parentheses correspond to the "name" in the form tag
+        String projectName = request.getParameter("project-name");
         String projectDescription = request.getParameter("project-description");
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         Entity newProjectEntity = new Entity("Project"); //"Project" is the entity 'kind' I'm creating
@@ -36,14 +35,14 @@ public class DataServlet extends HttpServlet {
         newProjectEntity.setProperty("projectName", projectName);
         newProjectEntity.setProperty("projectDescription", projectDescription);
         datastore.put(newProjectEntity); //stores the entity
-        response.getWriter().println("Congrats, your project was posted to the project board!");
+        response.getWriter().println("Congrats!  Your project was posted to the project board");
     }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         //Going through the database and posting the projects
-        Query query = new Query("Project"); //allows us to query through all the entities with kind "Project" and Property "userName"
+        Query query = new Query("Project"); //allows us to query through all the entities with kind "Project"
         PreparedQuery results = datastore.prepare(query); //resuls contains all the entities in Datastore with that kind
         ArrayList<HashMap<String, String>> projects = new ArrayList<>(); //this is an arrayList of HashMaps, each of which contain a specific project's details
         for (Entity entity: results.asIterable()) {
@@ -60,8 +59,6 @@ public class DataServlet extends HttpServlet {
         Gson gson = new Gson();
         response.setContentType("application/json;");
         response.getWriter().println(gson.toJson(projects)); //response contains all of the project's information in "application/json" form
-    } 
-//ELIAS
-//
+    }
 
 }
