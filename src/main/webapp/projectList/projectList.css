@@ -16,10 +16,6 @@ html, body {
   overflow: auto; /*this will give us the scroll bars when more content is on the page*/
 }
 
-#get-name {
-    margin-bottom: 200;
-}
-
 .header {
   width: 100%;
   height: 80px;
