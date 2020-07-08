@@ -7,7 +7,7 @@ function loadProjectInfo() {
             let postUserName = document.createElement('post-user-name');
             let postProjectName = document.createElement('post-project-name');
             let postProjectDescription = document.createElement('post-project-description');
-            console.log(projectInfo); 
+            console.log(projectInfo);  
             postUserName.innerHTML = "Posted By: " + projectInfo["userName"] + "";
             postProjectName.innerHTML = "Project Title: " + projectInfo["projectName"] + "";
             postProjectDescription.innerHTML = "Description: " + projectInfo["projectDescription"] + "";
