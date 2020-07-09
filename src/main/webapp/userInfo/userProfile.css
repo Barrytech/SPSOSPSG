@@ -5,7 +5,7 @@
     float: left;
     width: 30%;
     padding: 10px;
-    height: 300px; /* Should be removed. */
+    overflow: auto; /* Adjust container to expand with its content*/
     box-sizing: border-box;
 
     border-style:solid;
@@ -19,7 +19,7 @@
     float: left;
     width: 60%;
     padding: 10px;
-    height: 300px; /* Should be removed. */
+    overflow: auto; /* Adjust container to expand with its content*/
     box-sizing: border-box;
   
     border-style:solid;

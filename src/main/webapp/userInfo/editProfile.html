@@ -7,10 +7,10 @@
     <script src="userProfile.js"></script>
   </head>
 
-  <body>
+  <body onload="fetchBlobstoreUrlAndShowForm();">
       <h2>Edit Profile</h2>
       <hr>
-      <form action="/profile-data" method="POST">
+      <form id="profile-form" class="hidden" action="/profile-data" method="POST" enctype="multipart/form-data">
           <label for="firstname">First name:</label><br>
           <input type="text" id="firstname" name="firstname" style="width:100%"><br>
 
@@ -25,6 +25,11 @@
 
           <label for="birthday">Birthday:</label><br>
           <input type="date" id="birthday" name="birthday" style="width:30%"><br>
+
+          <p>Upload a Profile image:</p>
+          <input type="file" name="profile-image">
+          <br/><br/>
+
           <input class="button" type="submit" value="Submit">
       </form>
 
