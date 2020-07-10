@@ -2,6 +2,8 @@
 function displayProfileContent() {
   fetch('/profile-data').then(response => response.json()).then((info) => {
     const ul = document.getElementById("profile-info");
+    const headerWithName = document.getElementById("nameHeader");
+    headerWithName.innerHTML = info["firstname"] + info["lastname"] + 'Profile';
     ul.innerHTML = '';
     
     ul.appendChild(createListElement('First Name:' + info["firstname"]));
