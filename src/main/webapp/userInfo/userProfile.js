@@ -1,9 +1,9 @@
 
 function displayProfileContent() {
   fetch('/profile-data').then(response => response.json()).then((info) => {
-    const ul = document.getElementById("profile-info");
 
     /*
+    const ul = document.getElementById("profile-info");
     ul.innerHTML = ''; 
     ul.appendChild(createListElement('First Name:' + info["firstname"]));
     ul.appendChild(createListElement('Last Name:' + info["lastname"]));
@@ -27,6 +27,21 @@ function displayProfileContent() {
 
   });
 }
+
+
+function fillProfileContent() {
+  fetch('/profile-data').then(response => response.json()).then((info) => {
+
+    document.getElementById('firstname').value = info["firstname"];
+    document.getElementById('lastname').value = info["lastname"];
+    document.getElementById('username').value = info["username"];
+    document.getElementById('email').value = info["email"];
+    document.getElementById('birthday').value = info["birthday"];
+    //document.getElementById('profile-image').value = info["imageURL"];
+
+  });
+}
+
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {
