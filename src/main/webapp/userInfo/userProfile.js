@@ -15,6 +15,7 @@ function displayProfileContent() {
     document.getElementById('username').innerText = "Username: " + info["username"];
     document.getElementById('email').innerText = "Email: " + info["email"];
     document.getElementById('birthday').innerText = "Birthday: " + info["birthday"];
+    document.getElementById("profile-description").innerText = "Description: " + info["profileDescription"];
 
     // Add image to container and modify its attributes
     var img = document.createElement('img');
@@ -28,7 +29,7 @@ function displayProfileContent() {
   });
 }
 
-
+// Pre fills form input fields based on prevouis input stored in Datastore
 function fillProfileContent() {
   fetch('/profile-data').then(response => response.json()).then((info) => {
 
@@ -37,6 +38,7 @@ function fillProfileContent() {
     document.getElementById('username').value = info["username"];
     document.getElementById('email').value = info["email"];
     document.getElementById('birthday').value = info["birthday"];
+    document.getElementById("profile-description").value = info["profileDescription"];
     //document.getElementById('profile-image').value = info["imageURL"];
 
   });

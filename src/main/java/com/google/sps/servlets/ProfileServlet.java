@@ -57,13 +57,15 @@ public class ProfileServlet extends HttpServlet {
         String birthday = (String) entity.getProperty("birthday");
         String email = (String) entity.getProperty("email");
         String imageURL = (String) entity.getProperty("imageURL"); //profile image url
-        
+        String profileDescription = (String) entity.getProperty("profileDescription");
+
         info.put("firstname", firstname);
         info.put("lastname", lastname);
         info.put("username", username);
         info.put("birthday", birthday);
         info.put("email", email);
         info.put("imageURL", imageURL);
+        info.put("profileDescription", profileDescription);
 
         Gson gson = new Gson();
 
@@ -94,6 +96,7 @@ public class ProfileServlet extends HttpServlet {
     String username = request.getParameter("username");
     String birthday = request.getParameter("birthday");
     String email = request.getParameter("email");
+    String profileDescription = request.getParameter("profile-description");
     // Get the URL of the image that the user uploaded to Blobstore.
     String imageURL = getUploadedFileUrl(request, "profile-image");
 
@@ -106,6 +109,7 @@ public class ProfileServlet extends HttpServlet {
     ProfileEntity.setProperty("username", username);
     ProfileEntity.setProperty("birthday", birthday);
     ProfileEntity.setProperty("email", email);
+    ProfileEntity.setProperty("profileDescription", profileDescription);
     ProfileEntity.setProperty("id", id);
     if(imageURL != null){ //  if no image is uploaded
         ProfileEntity.setProperty("imageURL", imageURL);
