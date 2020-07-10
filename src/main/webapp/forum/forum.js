@@ -18,3 +18,13 @@ function myFunction() {
     }
   }
 }
+
+//once new thread clicked
+$(document).ready(function() {
+    //onload() comment form is hidden
+    $("#hidden").hide();
+
+    $("#newthread").click(function() {
+        $('#hidden').show();
+    });
+});

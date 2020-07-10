@@ -18,3 +18,12 @@ function myFunction() {
     }
   }
 }
+
+//once new thread clicked
+$(document).ready(function() {
+    $("#hidden").hide();
+
+    $("#newthread").click(function() {
+        $('#hidden').show();
+    });
+});
