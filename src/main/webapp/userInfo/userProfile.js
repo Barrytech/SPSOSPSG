@@ -23,6 +23,9 @@ function displayProfileContent() {
     img.style.borderRadius = "30px";
     img.style.height = "300px";
     img.style.width = "270px";
+    img.style.display = "block";
+    img.style.marginLeft = "auto";
+    img.style.marginRight = "auto";
     const image_holder = document.getElementById("profile-image-holder");
     image_holder.appendChild(img);
 
