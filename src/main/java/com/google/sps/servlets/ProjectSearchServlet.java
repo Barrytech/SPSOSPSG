@@ -19,8 +19,26 @@ import java.util.HashMap;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
+
+@WebServlet("/project-search")
 public class ProjectSearchServlet extends HttpServlet {
 
-//Implement a search feature
+    
 
-DatastoreService
+
+//Implement a search feature
+public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+      DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+  //  PreparedQuery searchResults = DatastoreService.PreparedQuery();
+      //bascially I will get what 
+
+
+}
+
+//I was thinking that this should parse what was entered in the text box?
+public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+
+}
+}
+

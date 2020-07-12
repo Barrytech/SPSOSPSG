@@ -8,12 +8,26 @@ html,body {
   text-align: center;
 }
 
-nav {
+.topNavBar  {
     width: 100%;
     background-color: blue;
+    float: left;
     position: fixed;
 
 }
+
+/* this is to style the search button */
+
+.topNavBar .searchButton {
+        float: right;  
+         
+}
+
+ .topnavBar input[type=text] {
+     color: #FFD700;
+    
+
+ }
 
 nav li {
   list-style-type: none;
