@@ -59,4 +59,19 @@
   background: #e7e7e7;
 }
 
-    
+#uploadfile{
+    background-image: url('upload.png');
+}
+#submitbut{
+    object-position: left;
+    margin-left: 220px;
+}
+
+#up{
+    height:30px;
+    width:35px;
+}
+#user{
+   height:65px;
+   width:65px;
+}
