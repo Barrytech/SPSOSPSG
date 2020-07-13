@@ -22,21 +22,37 @@ import com.google.appengine.api.users.UserServiceFactory;
 
 @WebServlet("/project-search")
 public class ProjectSearchServlet extends HttpServlet {
-
-    
+String enteredText = "";
 
 
 //Implement a search feature
 public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-  //  PreparedQuery searchResults = DatastoreService.PreparedQuery();
-      //bascially I will get what 
+
+            //Now I search through Datastore and willcheck if the project description or name has the words searched for if it does 
+            //will save it
+         Query searchQuery = new Query("Project").addSort("userName",SortDirection.DESCENDING)
+         PreparedQuery searchresults = datastore.prepare(searchquery);
+            ArrayList<HashMap<String,String>> projectsReturned = new ArrayList<>();
+
+for(Entity entity: searchresults.asIterable()) {
+        String projectDescription = (String)
+}
+            //
 
 
 }
 
 //I was thinking that this should parse what was entered in the text box?
 public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    //Now will get string from search Box
+   enteredText = getParameter(request, "searchfield", "");
+
+ 
+
+    //now store it,no actually query the database usign the entered text
+
 
 
 }
