@@ -7,9 +7,27 @@ html, body {
   height: 100%;
 }
 
+/* #outer-container {
+     background-color:#ffffff;
+} */
+
 #container {
   min-height: 100%;
   padding-bottom: 100px; /*this is the height of the footer*/
+  background-color: #E0E0E0;
+  /* margin: 20px; */ /*this will add the optional white border*/
+}
+
+.container-header {
+    vertical-align: middle;
+    height: 300px;
+    width: 300px;
+    /* margin: 10px; */
+}
+
+.container-header p {
+    font-size: 100px;
+    padding-top: 40px;
 }
 
 #main {
@@ -44,6 +62,10 @@ html, body {
   vertical-align: middle;
 }
 
+.logo h4 {
+    vertical-align: middle;
+}
+
 .nav {
   height: 100%;
   float: right;
@@ -71,16 +93,28 @@ html, body {
   font-size: 16px;
 }
 
+.project-post {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  list-style-type: none;
+}
+
 .post-user-name {
   margin-bottom: 10px;
+  font-family: 'Roboto Slab';
+  size: 10px;
 }
 
 .post-project-name {
   margin-bottom:10px;
+  font-family: 'Roboto Slab';
+  size: 20px;
 }
 
 .post-project-description {
   margin-bottom: 10px;
+  font-family: 'Roboto Slab';
+  size: 10px;
 }
 
 #footer {
@@ -95,6 +129,10 @@ html, body {
   clear: both;
   color: #ffffff;
 
+}
+
+#footer h3 {
+    vertical-align: middle;
 }
 
 p {
