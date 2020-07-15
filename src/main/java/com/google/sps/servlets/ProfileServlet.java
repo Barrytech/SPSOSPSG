@@ -111,16 +111,20 @@ public class ProfileServlet extends HttpServlet {
     ProfileEntity.setProperty("email", email);
     ProfileEntity.setProperty("profileDescription", profileDescription);
     ProfileEntity.setProperty("id", id);
-    if(imageURL != null){ //  if no image is uploaded
+    if(imageURL != null){ //  if an image is uploaded
         ProfileEntity.setProperty("imageURL", imageURL);
     }
-    else { // Allow previous uploaded images to persist
+    else {
+    /*
+        // Allow previous uploaded images to persist
         Query query = new Query("ProfileData").setFilter(new Query.FilterPredicate("id", Query.FilterOperator.EQUAL, id));
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         PreparedQuery results = datastore.prepare(query);
         Entity entity = results.asSingleEntity(); // A single entity as you only want the currently logged in user's info
         imageURL = (String) entity.getProperty("imageURL"); //profile image url
         ProfileEntity.setProperty("imageURL", imageURL);
+    */
+        ProfileEntity.setProperty("imageURL", null);
     }
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
