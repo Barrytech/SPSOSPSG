@@ -38,24 +38,21 @@ $(document).ready(function() {
                   $('#involvement-section').hide();
              }
          });
-
+//adds another comment on the page
       $("#addanother").click(function(){
-        $("#container").append('<div class="form-group"><label class="control-label col-md-4">File upload</label><div class="col-md-6"><input type="file" /><textarea required placeholder="Description of the document" class="form-control" name="description-of-incident" id="description-of-incident" rows="2"></textarea><div class="help-block with-errors"></div><a href="javascript:void(0);" class="remove-document-upload">Remove</a></div></div>');
+           $("#container").append($("#cmt"));
+        // $("#container").append('<div id="cmt"> <div class="row"><div class="col-md-1"></div><div class ="col-md-9"><textarea required placeholder="Description of the document" class="form-control" name="description-of-incident" id="comments" rows="1"> </textarea></div>  <div class ="col-md-2" id="uploadfile"><button> <img id="up" src="upload.png"/></button></div>    <br><br><div class ="row"> <button type="submit" class="btn btn-primary" id="submitbut"> Submit </button></div> <div class="help-block with-errors"></div></div></div><a href="javascript:void(0);" class="remove-document-upload">Remove</a></div></div>');
+      
       });
 
       $(".remove-document-upload").click(function(){
-          alert("dasdasdas");
-        //$(this).closest('.addanother').remove();
+      
+        $(this).closest('.addanother').remove();
       });
 
 
-    //   $("#addanother").click(function(){
-    //     $("#container").append($("#cmt"));
-    //   });
-      
-    $(document).on('click', ".remove-document-upload", function() {
-        alert("dasdasdas");
 
-    });
+      
+
 
 });
