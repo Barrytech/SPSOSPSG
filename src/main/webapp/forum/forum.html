@@ -1,0 +1,161 @@
+<!-- 
+    Class 1:
+        1.1 Wireframe your project
+        1.2 Fork and clone the repo and set up your project workspace
+    Class 2:  
+        2.1 Link your files in the head of the docment Add a Nav Bar to your site - It should have three links (Portfolio, About, and Contact) 
+        2.2 Add a div for each section. Within section add a contatiner div with the appropriate number of rows and columns
+    Class 3:  
+        3.1 Add thumbnails and other custom component (button, modal, font) using bootstrap Documentation 
+        3.2 Add CSS and add your site to gh-pages 
+-->
+`       
+<!DOCTYPE html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="forum.css" type="text/css" />
+    <script src="forum.js"></script>
+    <link rel="icon" href="images/logo.jpg" type='image/x-icon'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Forum </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Fontawesome CSS  -->
+    <nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top" class="navbar navbar-light" style="navbar-fixed-top" role="navigation">
+
+
+        <h1 style="text-align:center; font-weight: bolder;  font-family: Times; font-size: 30px; color: white">Student Junior Software Engineers</h1>
+
+    </nav>
+
+</head>
+
+<body>
+
+                        
+                  
+<div class="container myforumcont">
+        <br>
+        <h2 style="text-align:center; font-weight: bolder; font-family: Times; font-size: 40px"> Get Involved  </h2>
+
+        <div class="row">
+
+            <div class="col-md-3" id="left">
+                
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+                <ul id="myMenu">
+                <li><a href="#">Most Rated</a></li>
+                <li><a href="#"> Most Active</a></li>
+                <li><a href="#">Most Contributed</a></li>
+            </div>
+            <div class="col-md-9" id="right">
+                <br> 
+                <button class="btn default" id="newthread"> New Thread </button>
+                            <br> <br> 
+            
+            <div id="hidden">
+                <form action="/data" method="POST" id="#form">
+                  <div class="form-group">
+                      <div class="row">
+                      <!-- //first goes the profile -->
+                     <div class ="col-md-1" >
+                    <img src="userProfilepic.png" id="user"/>
+                </div>
+                <!-- //second goes the input field -->
+                <div class ="col-md-9">
+                <textarea required placeholder="Description of the document" class="form-control" name="description-of-incident" id="comments" rows="1">
+                </textarea>
+                </div>  
+                <!-- //then comes the upload icon -->
+                <div class ="col-md-2" id="uploadfile">
+                    <button> <img id="up" src="upload.png"/></button>
+                </div> 
+                    </div>
+                    <br><br><br><br><br>            
+                
+                 <div class ="row">
+                    <button type="submit" class="btn btn-primary" id="submitbut"> Submit </button>   
+                <button>
+                    </div>
+                    </form>
+                <div class="row">
+                <button>
+                <a href="javascript:void(0);" id="addanother">Add another</a>
+                </button>
+                <div class="help-block with-errors"></div>
+                </div>
+
+<div id="container">
+</div>
+
+
+
+            <div id="cmt">
+                <div class="row">
+                <div class="col-md-1"></div>
+                <div class ="col-md-9">
+                <textarea required placeholder="Description of the document" class="form-control" name="description-of-incident" id="comments" rows="1">
+                </textarea>
+                </div>  
+                <div class ="col-md-2" id="uploadfile">
+                    <button> <img id="up" src="upload.png"/></button>
+                </div>    
+                <br><br>
+                <div class ="row">
+                    <button type="submit" class="btn btn-primary" id="submitbut"> Submit </button>
+                </div>
+            
+                <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+
+            
+            <!-- END TWO -->
+
+            <hr>
+
+      
+ <div class="form-group">
+                <label class="control-label col-md-4">File upload</label>
+    <div class="col-md-6">
+      <input type="file" />
+      <textarea required placeholder="Description of the document" class="form-control" name="description-of-incident" id="description-of-incident" rows="2"></textarea>
+      <div class="help-block with-errors"></div><br />
+      <a href="javascript:void(0);" id="addanother">Add another</a>
+    </div>
+  </div>
+
+<div id="container">
+</div>
+
+
+<div class="form-group">
+    <label class="control-label col-md-4">File upload</label>
+    <div class="col-md-6"><input type="file" />
+    <textarea required placeholder="Description of the document" class="form-control" name="description-of-incident" id="description-of-incident" rows="2"></textarea>
+    <div class="help-block with-errors"></div>
+    <a href="javascript:void(0);" class="remove-document-upload">Remove</a>
+    </div>
+    </div>');
+      });
+            
+
+                <br> <br> <br> <br> <br> <br> <br> <br> 
+                <button class="btn default"> See world </button>
+
+                
+                   
+            </div>
+        </div>
+    
+    
+    
+</body>
+
+</html>
