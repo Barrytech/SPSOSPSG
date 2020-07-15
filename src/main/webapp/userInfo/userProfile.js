@@ -2,15 +2,6 @@
 function displayProfileContent() {
   fetch('/profile-data').then(response => response.json()).then((info) => {
 
-    /*
-    const ul = document.getElementById("profile-info");
-    ul.innerHTML = ''; 
-    ul.appendChild(createListElement('First Name:' + info["firstname"]));
-    ul.appendChild(createListElement('Last Name:' + info["lastname"]));
-    ul.appendChild(createListElement('Email:' + info["email"]));
-    ul.appendChild(createListElement('Username:' + info["username"]));
-    ul.appendChild(createListElement('Birthday:' + info["birthday"]));
-    */
     document.getElementById('name').innerText = "Name: " + info["firstname"] + " " + info["lastname"];
     document.getElementById('username').innerText = "Username: " + info["username"];
     document.getElementById('email').innerText = "Email: " + info["email"];
@@ -19,7 +10,12 @@ function displayProfileContent() {
 
     // Add image to container and modify its attributes
     var img = document.createElement('img');
-    img.src =  info["imageURL"];
+    if (info["imageURL"] != null) {
+        img.src =  info["imageURL"];
+    }
+    else {
+        img.src = "https://alumni.crg.eu/sites/default/files/default_images/default-picture_0_0.png"; //default image
+    }
     img.style.borderRadius = "30px";
     img.style.height = "300px";
     img.style.width = "270px";
