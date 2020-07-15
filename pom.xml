@@ -34,6 +34,7 @@
 
 <!-- // task entity dependency -->
     <dependency>
+<<<<<<< HEAD
   <groupId>com.google.appengine</groupId>
   <artifactId>appengine-api-1.0-sdk</artifactId>
   <version>1.9.59</version>
@@ -46,6 +47,12 @@
   <artifactId>appengine-api-1.0-sdk</artifactId>
   <version>1.9.59</version>
 </dependency>
+=======
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-api-1.0-sdk</artifactId>
+        <version>1.9.59</version>
+    </dependency>
+>>>>>>> 6f1a18b509e3bbf911b31acf6d4908097562ef22
 
   </dependencies>
 
