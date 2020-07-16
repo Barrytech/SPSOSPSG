@@ -1,3 +1,4 @@
 /home/abarry/SPSOSPSG/src/main/java/com/google/sps/servlets/ProfileServlet.java
 /home/abarry/SPSOSPSG/src/main/java/com/google/sps/servlets/DataServlet.java
 /home/abarry/SPSOSPSG/src/main/java/com/google/sps/servlets/LoginServlet.java
+/home/abarry/SPSOSPSG/src/main/java/com/google/sps/servlets/BlobstoreUploadUrlServlet.java
