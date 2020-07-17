@@ -13,8 +13,8 @@ function loadSearchResults() {
        var projectTitle = document.getElementById("ProjectTitle");
        var projectDescription = document.getElementById("ProjectDescription");
 
-       projectTitle.innerHTML =  "Project Title" + " " + project["projectName"];
-       projectDescription.innerHTML = "Description" +  " " + project["projectDescription"];
+       projectTitle.innerHTML =  "Project Title:" + "  " + project["projectName"];
+       projectDescription.innerHTML = "Description:" +  "  " + project["projectDescription"];
 
        projects.appendChild(projectTitle);
        projects.appendChild(projectDescription);
