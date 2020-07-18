@@ -41,9 +41,9 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
             //Now I search through Datastore and willcheck if the project description or name has the words searched for if it does 
-            //will save it
-         Query searchQuery = new Query("Project");
-         PreparedQuery searchresults = datastore.prepare(searchQuery);
+            
+         Query searchQuery = new Query("Project"); //Searching throug datastore for all types project
+         PreparedQuery searchresults = datastore.prepare(searchQuery);  
             ArrayList<HashMap<String,String>> projectsReturned = new ArrayList<>();
 
 for(Entity entity: searchresults.asIterable()) {
@@ -76,14 +76,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
  String newText  = request.getParameter("searchfield");
 setEnteredText(newText);
 
-if(enteredText == ""){
-    PrintWriter writer = response.getWriter();
-        String responsed= "<html> <p> Your thing is empty fool  </p>   </html>";
-        writer.println(responsed);
 
-}else {
-response.sendRedirect("/HomePages/projectSpace.html");
-}
+response.sendRedirect("projectSpace.html");
+
  
 
 

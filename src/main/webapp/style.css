@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 
 html,body {
@@ -8,40 +9,62 @@ html,body {
   text-align: center;
 }
 
-.topNavBar  {
-    width: 100%;
-    background-color: blue;
-    float: left;
-    position: fixed;
+/* Nav Bar starts here */
+ header {
+    background-color: black;
+    font-family: "Ubuntu";
+    font-size:16px;
+    font-weight: 500;
+    display:flex;
+    justify-content: center;                    ;
+ 
+}
+
+.nav_links {
+    list-style: none;
+    margin-left:350px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+      color: white;
+     ;
+}
+
+.nav_links li a:hover {
+    background: white;
+    color: black;
+    background-size: inherit;
+}
+
+ .searchButton {
+  margin: auto;
+  
 
 }
 
-/* this is to style the search button */
+ .searchButton [type=text] {
+  border: 1px;
+  font-size: 17px;
+  margin-left: 200px;
 
-.topNavBar .searchButton {
-        float: right; 
-        margin-top: 10px;
-         
 }
 
- .topnavBar input[type=text] {
-     color: #FFD700;
-    
-
- }
-
-nav li {
-  list-style-type: none;
-  float: left;
-  font-family: Arial;
-  margin-right: 20px;
-  padding: 14px 16px;
-  top: 0;
+ .searchButton button {
+  background: #ddd;
+  font-size: 17px;
+  left: 3px;
+  border: none;
+  cursor: pointer;
 }
 
-nav a {
-  color: #FFD700;
-}
+/*Nav Bar Ends here */
+
+
 
 .textBlock {
   margin-top: 200px;
@@ -59,7 +82,7 @@ nav a {
 
 .firstBlock  {
   text-align: center;
-  background-color: #FFD700;
+  background-color: black;
   position: relative;
   top: 20px;
   width: 100%;
@@ -68,7 +91,7 @@ nav a {
   
 }
 .secondBlock {
-   background-color: blue;
+   background-color: #FFD700;
   text-align: center;
   width: 100%;
   height: 250px;
@@ -76,10 +99,21 @@ nav a {
 }
 
 .thirdBlock {
-      background-color: #FFD700;
+      background-color: black;
   text-align: center;
   width: 100%;
   height: 250px;
   float: left;
+
+}
+
+/* in search results page */
+
+#ProjectTitle {
+    font-size: 20px;
+}
+
+#ProjectTitle {
+    font-size: 20px;
 
 }
