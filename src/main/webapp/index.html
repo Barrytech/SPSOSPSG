@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TeamUp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://use.fontawesome.com/e6c7837d78.js"></script>
+  </head>
+  <body onload="displayLoginContent();">
+        <!-- Nav bar !-->
+        <header>
+        <nav>
+            <ul class="nav_links">
+                <li> <a href="/index.html">Home</a></li>
+                <li id="project-item"  style="display:none;"> <a href="/projectList/projectList.html">Project</a></li>
+                <li id="forum-item"  style="display:none;"> <a href= "/forum/forum.html">Forum</a></li>
+                <li id="profile-item"  style="display:none;"> <a href="/userInfo/userProfile.html">My Profile</a></li>
+                <li class="header-item" style="float:right;display:none;" id="login-header"> <a id="login-link" href=""></a></li>
+            </ul>
+        </nav>
+         <div class="searchButton">
+            <form action="/project-search" method="post">
+        <input type="text" placeholder="Seach for a propject" name="searchfield">
+        <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+         </header>
+         <!-- Nav Bar ends here !-->
+    
+
+  <br>
+  <br>
+
+          <h1 id="TeamUpWelcome"> Welcome to TeamUp </h1>
+
+          <div class="textBlock">
+        <div class="firstBlock">
+            <p style="color: #FFFFFF">Post a project that you want to find a team on </p>
+             <i class="fa fa-wpforms fa-4x" aria-hidden="true" style="color:#FFFFF"></i>
+        </div>
+
+        <div class="secondBlock">
+            <p> Communicate with people who are intrested in working with you</p>
+            <i class="fa fa-comments fa-4x" aria-hidden="true" style="color:#00000"></i>
+
+          </div>
+
+        <div class="thirdBlock">
+          <p style="color: #FFFFFF">Team up to get things done!</p>
+
+        </div>
+
+      </div>
+  </body>
+
+        
+
+
+
+</html>

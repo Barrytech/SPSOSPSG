@@ -8,18 +8,27 @@
   </head>
 
   <body onload="displayLoginContent(); displayProfileContent();">
-      <h2>Profile</h2>
-      <hr>
-      <button class="button" onclick="" id="login-button-1" style="display:none;">Login</button>
       
-      <div id="profile-container" class="row" style="display:none;">
+      <nav>
+            <ul class="header">
+                <li class="header-item"> <a href="/index.html">Home</a></li>
+                <li class="header-item" id="project-item"  style=""> <a href="/projectList/projectList.html">Project</a></li>
+                <li class="header-item" id="forum-item"  style=""> <a href= "/forum/forum.html">Forum</a></li>
+                <li class="header-item" style="float:right;" id="login-header"> <a id="logout-1-a" href="">Logout</a></li>
+            </ul>
+      </nav>
+
+      <!-- login button only displayed if not logged in--> 
+      <button class="button" onclick="" id="login-button-1" style="display:none;">Login</button>
+      <br><br>
+      <div id="profile-container" class="row" style="display:none; margin: 0 auto;">
           <div class="column1" style="background-color:#e6e6e6;">
               <h2>Profile</h2>
               <hr>
               <div id="profile-image-holder"></div>
               <hr>
               <button class="button" id="edit-button-1"><a href="editProfile.html" class="a1">Edit</a></button>
-              <button class="button" id="logout-button-1"><a id="logout-1-a" href="" class="a1">Logout</a></button>
+              <!-- <button class="button" id="logout-button-1"><a id="logout-1-a" href="" class="a1">Logout</a></button> -->
               <!-- <ul id="profile-info"></ul> -->
               <hr>
               <p id="username"></p>

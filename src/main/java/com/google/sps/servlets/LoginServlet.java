@@ -30,13 +30,13 @@ public class LoginServlet extends HttpServlet {
     HashMap<String, String> info = new HashMap<String, String>();
     if (userService.isUserLoggedIn()) {
       String userEmail = userService.getCurrentUser().getEmail();
-      String urlToRedirectToAfterUserLogsOut = "/userInfo/userProfile.html";
+      String urlToRedirectToAfterUserLogsOut = "/index.html";  //maybe change later: /userInfo/userProfile.html
       String logoutUrl = userService.createLogoutURL(urlToRedirectToAfterUserLogsOut);
       info.put("status", "true");
       info.put("url", logoutUrl);
       info.put("email", userEmail);
     } else {
-      String urlToRedirectToAfterUserLogsIn = "/userInfo/userProfile.html";
+      String urlToRedirectToAfterUserLogsIn = "/index.html";
       String loginUrl = userService.createLoginURL(urlToRedirectToAfterUserLogsIn);
       info.put("status", "false");
       info.put("url", loginUrl);

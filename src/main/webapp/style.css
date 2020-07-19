@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+
+html,body {
+  overflow-y: scroll;
+}
+
+#TeamUpWelcome {
+  text-align: center;
+}
+
+/* Nav Bar starts here */
+ header {
+    background-color: black;
+    font-family: "Ubuntu";
+    font-size:16px;
+    font-weight: 500;
+    display:flex;
+    justify-content: center;                    ;
+ 
+}
+
+.nav_links {
+    list-style: none;
+    margin-left:350px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+      color: white;
+     ;
+}
+
+.nav_links li a:hover {
+    background: white;
+    color: black;
+    background-size: inherit;
+}
+
+ .searchButton {
+  margin: auto;
+  
+
+}
+
+ .searchButton [type=text] {
+  border: 1px;
+  font-size: 17px;
+  margin-left: 200px;
+
+}
+
+ .searchButton button {
+  background: #ddd;
+  font-size: 17px;
+  left: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Nav Bar Ends here */
+
+
+
+.textBlock {
+  margin-top: 200px;
+/*background: linear-gradient(to bottom, blue 0%, blue 20%, yellow 20%); */
+}
+.textBlock p {
+  position: relative;
+  top:50px;
+  height: 100px;
+  font-family: Roboto;
+  font-size: 30px;
+
+
+}
+
+.firstBlock  {
+  text-align: center;
+  background-color: black;
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 250px;
+  float: left;
+  
+}
+.secondBlock {
+   background-color: #FFD700;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  clear: both;
+}
+
+.thirdBlock {
+      background-color: black;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  float: left;
+
+}
+
+/* in search results page */
+
+#ProjectTitle {
+    font-size: 20px;
+}
+
+#ProjectTitle {
+    font-size: 20px;
+
+}
