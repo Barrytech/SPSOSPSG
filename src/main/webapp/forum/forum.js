@@ -48,16 +48,18 @@ $(document).ready(function() {
       
         $(this).closest('.addanother').remove();
       });
+
+
 //here starts the code to appending comment inside the canvas
 
 
-
-function PostComments() {
-    doPost(htmlResponse);
-}
-
+// function PostComments() {
+//     doPost(htmlResponse);
+// }
+var com = $("#comments").val();
 $("#submitbut").click(function(){
-    $("#contcom").append(PostComments());
+    $("#contcom").append('PostComments()');
+    // $("#contcom").append(com);
 
     //  PostComments();
 });
@@ -67,4 +69,7 @@ $("#submitbut").click(function(){
 
 
 
+
+
 }); //closes document.ready
+

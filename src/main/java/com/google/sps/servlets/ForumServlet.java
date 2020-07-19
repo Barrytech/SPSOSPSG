@@ -33,15 +33,10 @@ public class ForumServlet extends HttpServlet {
 
     @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // response.setContentType("text/html;");
-    // response.getWriter().println("<h1>Hello Barry!</h1>");
-
+  
     response.setContentType("application/json");
 
     Gson gson = new Gson();
-
-//  String json = gson.toJson(facts);
-//  response.getWriter().println(json);
 
 ArrayList<Task> entities = new ArrayList<>();
 //code for comments form:
@@ -55,12 +50,14 @@ ArrayList<Task> entities = new ArrayList<>();
             String json = gson.toJson(entities);
             response.getWriter().println(entities);
 
+            
+
 }
 
 public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
       // read form fields
 
-        String comments = request.getParameter("comments-input");
+        String comments = request.getParameter("feedback-field");
         System.out.println("Comments: " + comments);
         // do some processing here...
         // get response writer
@@ -79,6 +76,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
        
         datastore.put(taskEntity);
         response.sendRedirect("/forum.html");
+        
 
             
         }
