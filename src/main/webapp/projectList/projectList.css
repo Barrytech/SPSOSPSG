@@ -21,80 +21,82 @@ html, body {
 .container-header {
     vertical-align: middle;
     height: 300px;
-    width: 300px;
+    width: 1920px;
     /* margin: 10px; */
 }
 
 .container-header p {
+    
     font-size: 100px;
     padding-top: 40px;
+}
+
+.header-box {
+    width: 300px;
+    margin-left: 800px;
 }
 
 #main {
   overflow: auto; /*this will give us the scroll bars when more content is on the page*/
 }
 
-.header {
-  width: 100%;
-  height: 80px;
-  display: block; /*What's the function of display block?*/
-  background-color: #000000; 
+/* Nav Bar starts here */
+ header {
+    background-color: black;
+    font-family: "Ubuntu";
+    font-size:16px;
+    font-weight: 500;
+    display:flex;
+    justify-content: center;
+ 
 }
 
-.inner-header {
-  width: 1000px;
-  height: 100%;
-  display: block; /*What's the function of display block?*/
-  margin: 0 auto;
-  color: #ffffff;
+.nav_links {
+    list-style: none;
+    margin-left:350px;
 }
 
-.logo-container {
- height: 100%;
-  display: table; /*What's the function of display table?*/
-  float: left;
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+      color: white;
+     ;
+}
+
+.nav_links li a:hover {
+    background: white;
+    color: black;
+    background-size: inherit;
+}
+
+ .searchButton {
+  margin: auto;
+  
 
 }
 
-.logo {
-  height: 100%;
-  display: table-cell; /*What's the function of display table-cell?*/
-  vertical-align: middle;
+ .searchButton [type=text] {
+  border: 1px;
+  font-size: 17px;
+  margin-left: 200px;
+
 }
 
-.logo h4 {
-    vertical-align: middle;
+ .searchButton button {
+  background: #ddd;
+  font-size: 17px;
+  left: 3px;
+  border: none;
+  cursor: pointer;
 }
 
-.nav {
-  height: 100%;
-  float: right;
-}
-
-.nav a {
-  height: 100%;
-  display: table;
-  float: left;
-  padding: 0px 20px; /*first is horizontal (which is 0 bc we already centered it) then vertical(
-                       is 20 because we want space between the words*/
-}
-
-/*
-.nav a: last-child {
-  padding-right: 0;
-} 
-*/
-
-.nav a li {
-  display: table-cell;
-  vertical-align: middle; /*positions the words in the middle vertically*/
-  color: #ffffff;
-  font-family: 'Montserrat';
-  font-size: 16px;
-}
+/*Nav Bar Ends here */
 
 .project-post {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-left: 20px;
   list-style-type: none;
 }
@@ -115,6 +117,11 @@ html, body {
   margin-bottom: 10px;
   font-family: 'Roboto Slab';
   size: 10px;
+}
+
+#projects-container {
+    width: 500px;
+    margin-left: 100px;
 }
 
 #footer {

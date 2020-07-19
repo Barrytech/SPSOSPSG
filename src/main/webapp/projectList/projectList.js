@@ -1,7 +1,7 @@
 function loadProjectInfo() {
       const projectInfoPromise = fetch('/project-info').then(response => response.json()); //we're fetching information from the 'project-list' server
       projectInfoPromise.then((response) => { //fecth() returns a 'promise' object, saying that when the server sends back information, then do "X"
-      let container = document.getElementById("container");
+      let projectsContainer = document.getElementById("projects-container");
         for (let i = 0; i < response.length; i++) { //response = the arrayList in Json
             let projectInfo = response[i];
             let project = document.createElement('ul');
@@ -19,7 +19,7 @@ function loadProjectInfo() {
             project.appendChild(postUserName);
             project.appendChild(postProjectName);
             project.appendChild(postProjectDescription);
-            container.appendChild(project); //here, we append the data that the javascript receives to the container id tag
+            projectsContainer.appendChild(project); //here, we append the data that the javascript receives to the container id tag
         }
 
     })

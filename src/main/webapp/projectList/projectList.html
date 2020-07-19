@@ -7,25 +7,35 @@
         <script src="projectList.js"></script>
     </head>
     <body onload = loadProjectInfo()>
-        <div class = "header">
-                <div class = "inner-header">
-                    <div class = "logo-container">
-                        <div class = logo>
-                            <h1>"OPEN SOURCE PROJECT"</h1>
-                            <h4> "Collaboration is Key"</h4>
-                        </div>
-                    </div>
-                        <ul class = "nav"> 
-                            <a href = "submitProject.html"><li>Post a new Project</li></a>
-                        </ul>
-                </div>
-            </header>
+                <!-- Nav bar !-->
+        <header>
+        <nav>
+            <ul class="nav_links">
+                <li> <a href="/index.html">Home</a></li>
+                <li id="project-item"  style="display:none;"> <a href="/projectList/projectList.html">Project</a></li>
+                <li id="forum-item"  style="display:none;"> <a href= "/forum/forum.html">Forum</a></li>
+                <li id="profile-item"  style="display:none;"> <a href="/userInfo/userProfile.html">My Profile</a></li>
+                <li class="header-item" style="float:right;display:none;" id="login-header"> <a id="login-link" href=""></a></li>
+            </ul>
+        </nav>
+         <div class="searchButton">
+            <form action="/project-search" method="post">
+        <input type="text" placeholder="Seach for a project" name="searchfield">
+        <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+         </header>
+         <!-- Nav Bar ends here !-->
 
         <!-- <div id = "outer-container"> -->
             <div id = "container">
                 <div class = "container-header">
-                    <p>Project List
-                    </p>
+                    <div class = "header-box">
+                        <p>Project List
+                        </p>
+                    </div>
+                </div>
+                <div id = "projects-container">
                 </div>
             </div>
         <!-- </div> -->
