@@ -2,6 +2,7 @@
 .column1 {
     border-radius: 15px 50px 30px;
     margin-right: 2.5em;
+    margin-left: 2.5em;
     float: left;
     width: 30%;
     padding: 10px;
@@ -67,4 +68,35 @@ input[type=date] {
   
     background-color: #d9d9d9;
     color: black;
+}
+
+/*------------------------------------- */
+
+.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.header-item {
+    float: left;
+}
+
+.header-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header-item a:hover {
+    background-color: #111;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
