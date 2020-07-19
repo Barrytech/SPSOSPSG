@@ -8,8 +8,19 @@
   </head>
 
   <body onload="fetchBlobstoreUrlAndShowForm(); fillProfileContent();">
-      <h2>Edit Profile</h2>
-      <hr>
+
+      <nav>
+            <ul class="header">
+                <li class="header-item"> <a href="/index.html">Home</a></li>
+                <li class="header-item" id="project-item"  style=""> <a href="/projectList/projectList.html">Project</a></li>
+                <li class="header-item" id="forum-item"  style=""> <a href= "/forum/forum.html">Forum</a></li>
+                <li class="header-item" style="float:right;" id="login-header"> <a id="logout-1-a" href="">Logout</a></li>
+            </ul>
+      </nav>
+
+      <h2 style="text-align:center;">Edit Profile</h2>
+      <hr style="margin-left:20px;margin-right:20px;">
+      <div style="margin-left:20px;margin-right:20px;">
       <form id="profile-form" class="hidden" action="/profile-data" method="POST" enctype="multipart/form-data">
           <label for="firstname">First name:</label><br>
           <input type="text" id="firstname" name="firstname" style="width:100%" required><br>
@@ -35,6 +46,7 @@
 
           <input class="button" type="submit" value="Submit">
       </form>
+      </div>
 
   </body>
 </html>
