@@ -1,0 +1,85 @@
+
+
+html,body {
+  overflow-y: scroll;
+}
+
+#TeamUpWelcome {
+  text-align: center;
+}
+
+.topNavBar  {
+    width: 100%;
+    background-color: blue;
+    float: left;
+    position: fixed;
+
+}
+
+/* this is to style the search button */
+
+.topNavBar .searchButton {
+        float: right; 
+        margin-top: 10px;
+         
+}
+
+ .topnavBar input[type=text] {
+     color: #FFD700;
+    
+
+ }
+
+nav li {
+  list-style-type: none;
+  float: left;
+  font-family: Arial;
+  margin-right: 20px;
+  padding: 14px 16px;
+  top: 0;
+}
+
+nav a {
+  color: #FFD700;
+}
+
+.textBlock {
+  margin-top: 200px;
+/*background: linear-gradient(to bottom, blue 0%, blue 20%, yellow 20%); */
+}
+.textBlock p {
+  position: relative;
+  top:50px;
+  height: 100px;
+  font-family: Roboto;
+  font-size: 30px;
+
+
+}
+
+.firstBlock  {
+  text-align: center;
+  background-color: #FFD700;
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 250px;
+  float: left;
+  
+}
+.secondBlock {
+   background-color: blue;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  clear: both;
+}
+
+.thirdBlock {
+      background-color: #FFD700;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  float: left;
+
+}

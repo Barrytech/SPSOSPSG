@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  padding-bottom: 100px; /*this is the height of the footer*/
+}
+
+
+
+#main {
+  overflow: auto; /*this will give us the scroll bars when more content is on the page*/
+}
+
+.new-project-form-fields p {
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: block; /*What's the function of display block?*/
+  background-color: #000000; 
+}
+
+.inner-header {
+  width: 1000px;
+  height: 100%;
+  display: block; /*What's the function of display block?*/
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.logo-container {
+ height: 100%;
+  display: table; /*What's the function of display table?*/
+  float: left;
+
+}
+
+.logo {
+  height: 100%;
+  display: table-cell; /*What's the function of display table-cell?*/
+  vertical-align: middle;
+}
+
+.nav {
+  height: 100%;
+  float: right;
+}
+
+.nav a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px; /*first is horizontal (which is 0 bc we already centered it) then vertical(
+                       is 20 because we want space between the words*/
+}
+
+/*
+.nav a: last-child {
+  padding-right: 0;
+} 
+*/
+
+.nav a li {
+  display: table-cell;
+  vertical-align: middle; /*positions the words in the middle vertically*/
+  color: #ffffff;
+  font-family: 'Montserrat';
+  font-size: 16px;
+}
+
+#footer {
+  height: 100px;
+  /*z-index: 19;*/
+  /*min-width: 100%;*/
+  background-color: #000000;
+  position: relative;
+  margin-top: -100px; /*this is negative because we set the height of the container to 100px, so
+                       it is pushing the footer below the view of the window.  Therefore, we need
+                       to make it negative in order for the footer to be visible.*/
+  clear: both;
+  color: #ffffff;
+
+}
