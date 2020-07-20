@@ -7,7 +7,7 @@
     <script src="userProfile.js"></script>
   </head>
 
-  <body onload="displayLoginContent(); displayProfileContent();">
+  <body onload="displayLoginContent(); displayProfileContent(); displaySkillContent();">
       
       <nav>
             <ul class="header">
@@ -37,7 +37,7 @@
               <hr>
               <p id="email"></p>
               <hr>
-              <p id=birthday></p>
+              <p id="birthday"></p>
               <hr>
               <p id="profile-description"></p>
 
@@ -48,6 +48,24 @@
             <h2>Projects</h2>
             <hr>
             <p>projects info..</p>
+          </div>
+          
+          <div class="column2" style="background-color:#e6e6e6;margin-top: 25px;"> <!-- -->
+            <h2>Skills, Experience and Education</h2>
+            <hr>
+              <button class="button" id=""><a href="editSkills.html" class="a1">Edit</a></button>
+              <hr>
+              <div>
+                <p id="school"></p>
+                <hr>
+                <p id="degree"></p>
+                <hr>
+                <p id="major"></p>
+                <hr>
+                <p id="skill"></p>
+                <hr>
+                <p id="experience"></p>
+              </div>
           </div>
       </div>
       
