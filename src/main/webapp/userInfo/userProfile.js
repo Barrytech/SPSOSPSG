@@ -55,6 +55,19 @@ function displaySkillContent() {
   });
 }
 
+// Pre fills form input fields based on prevouis input stored in Datastore
+function fillSkillContent() {
+  fetch('/skill-data').then(response => response.json()).then((info) => {
+
+    document.getElementById('school').value = info["school"];
+    document.getElementById('degree').value = info["degree"];
+    document.getElementById('major').value = info["major"];
+    document.getElementById('skill').value = info["skill"];
+    document.getElementById('experience').value = info["experience"];
+
+  });
+}
+
 /** Creates an <li> element containing text. */
 function createListElement(text) {
   const liElement = document.createElement('li');
