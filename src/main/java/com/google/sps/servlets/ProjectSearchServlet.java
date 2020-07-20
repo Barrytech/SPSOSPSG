@@ -45,11 +45,15 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
          Query searchQuery = new Query("Project"); //Searching throug datastore for all types project
          PreparedQuery searchresults = datastore.prepare(searchQuery);  
             ArrayList<HashMap<String,String>> projectsReturned = new ArrayList<>();
+    //I will save the entered word as the first element of the hashmap this will be  used to label what the user typed in
+        HashMap<String,String> firstEntry = new HashMap();
+            firstEntry.put("userEntry", enteredText);
+            projectsReturned.add(firstEntry);
 
 for(Entity entity: searchresults.asIterable()) {
        String projectDescription = (String) entity.getProperty("projectDescription");
        String projectTitle  = (String) entity.getProperty("projectName");
-       
+
 
         //now if the projectDescription or Title contains the entered text, then we will store it into a hashmap to be posted
         if((projectDescription != null && projectTitle != null) && (projectDescription.contains(getEnteredText()) || projectTitle.contains(getEnteredText()))) {

@@ -9,16 +9,28 @@
   </head>
   <body onload="loadSearchResults()">
 
-      <br>
-      <br>
+         <header>
+        <nav>
+            <ul class="nav_links">
+                <li> <a href="index.html">Home</a></li>
+       <li> <a href="/projectList/projectList.html">Projects</a></li>
+      <li> <a href= "/forum/forum.html">Forum</a></li>
+      <li> <a href="/userInfo/userProfile.html">My Profile</a></li>  
+            </ul>
+        </nav>
+         <div class="searchButton">
+            <form action="/project-search" method="post">
+        <input type="text" placeholder="Seach for a project" name="searchfield">
+        <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+         </header>
 
-        <h2>Search Results </h2>
+        <br>
+
+        <h2 id="headerText"></h2>
 
         <ul id="ProjectsReturnedList">
-            <li id="ProjectTitle"></li>
-             <br>
-             <br>
-            <li id="ProjectDescription"></li>
         </ul>
           
      
