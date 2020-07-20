@@ -14,8 +14,8 @@ html, body {
 #container {
   min-height: 100%;
   padding-bottom: 100px; /*this is the height of the footer*/
-  background-color: #E0E0E0;
-  /* margin: 20px; */ /*this will add the optional white border*/
+  /* background-color: #E0E0E0; */
+   margin: 20px; /*this will add the optional white border*/
 }
 
 /* .container-header {
@@ -74,8 +74,6 @@ html, body {
 
  .searchButton {
   margin: auto;
-  
-
 }
 
  .searchButton [type=text] {
@@ -127,6 +125,7 @@ html, body {
   margin-bottom: 40px;
   margin-left: 20px;
   list-style-type: none;
+  
 }
 
 .post-user-name {
@@ -148,6 +147,42 @@ html, body {
 #projects-container {
     width: 500px;
     margin-left: 100px;
+    float: left;
+}
+
+#forum-box-link {
+    width: 300px;
+    height: 550px;
+    float: left;
+    border: solid;
+    margin-left: 250px;
+    margin-top: 60px;
+    background-color: #000000;
+}
+
+#join-convo {
+    margin-top: 65px;
+    /* margin-left: 15px; */
+    text-align: center;
+    display: inline-block;
+}
+
+#forum-box-link h2 {
+    display: inline-block;
+    font-family: 'Helvetica';
+    color: #ffffff;
+}
+
+#forum-box-link h1 {
+    display: inline-block;
+    font-family: 'Helvetica';
+    color: #FFD700;
+}
+
+#submit-a-new-project {
+    margin-top: 150px;
+    /* margin-left: 15px; */
+    text-align: center;
 }
 
 #footer {
@@ -172,4 +207,8 @@ p {
   letter-spacing: 1px;
   text-align: center;
   color: #000000;
+}
+
+a {
+  color: #ffffff;
 }
