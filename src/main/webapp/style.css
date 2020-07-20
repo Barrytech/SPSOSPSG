@@ -109,11 +109,18 @@ html,body {
 
 /* in search results page */
 
-#ProjectTitle {
+.projectTitle {
     font-size: 20px;
+      font-family: "Ubuntu";
+    font-weight: 500;
+    list-style-type: none;
+
 }
 
-#ProjectTitle {
+.projectDescription {
     font-size: 20px;
-
+    font-family: "Ubuntu";
+    font-weight: 500;
+    list-style-type: none;
 }
+
