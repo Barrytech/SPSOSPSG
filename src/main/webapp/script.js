@@ -1,28 +1,31 @@
 
-
+//Loads the search results
 function loadSearchResults() {
  const projectSearchPromise = fetch('/project-search').then(response => response.json());
 
 
   projectSearchPromise.then((response) => {
         console.log(response);
-      for(let i = 0; i < response.length; i++){
+
+        if(response.length == 1){
+            var header = document.getElementById("headerText");
+          let project = response[0];
+            header.innerHTML = "No Projects With " + response["userEntry"];
+        } else {
+             var header = document.getElementById("headerText");
+                let firstword = response[0];
+            header.innerHTML = "Projects with the word" +  " " + firstword["userEntry"];
+      for(let i = 1; i < response.length; i++){
                 //Now will populate my html with porject titles anddescriptions
        let project = response[i]; //THis saves each the hashmap into the variable project
-
-        if(i = 0){
-            var header = document.getElementById("headerText");
-          
-            header.innerHTML = "Search results for " + project["userEntry"];
-            continue;
-        } else {
+ 
             var mutipleProjects = document.getElementById("ProjectsReturnedList");
             var mprojectTitle = document.createElement('li');
                         mprojectTitle.className = 'projectTitle';
             var mprojectDescription = document.createElement('li');
             mprojectDescription.className = 'projectDescription';
             var breaktag = document.createElement('br');
-        
+           
         mprojectTitle.innerHTML =  "Project Title:" + "  " + project["projectName"];
         mprojectDescription.innerHTML = "Description:" +  "  " + project["projectDescription"];
 
@@ -47,11 +50,13 @@ function loadSearchResults() {
        }
        */
       
-      }
+      
+        }
 
   })
   
 }
+
 
 /** Fetches login status. */
 function displayLoginContent() {
@@ -65,9 +70,9 @@ function displayLoginContent() {
     const loginHeader = document.getElementById("login-header");
 
     if (info["status"] === "true") { // User is logged in
-        profileNav.style.display = "block"; //display
-        forumNav.style.display = "block"; //display
-        projectNav.style.display = "block"; //display
+        profileNav.style.display = "inline-block"; //display
+        forumNav.style.display = "inline-block"; //display
+        projectNav.style.display = "inline-block"; //display
 
         // Display Logout header tab
         loginHeader.style.display = "block";  //display
