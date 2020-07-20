@@ -1,7 +1,0 @@
-com/google/sps/servlets/LoginServlet.class
-com/google/sps/servlets/ProjectSearchServlet.class
-com/google/sps/data/Task.class
-com/google/sps/servlets/ProfileServlet.class
-com/google/sps/servlets/BlobstoreUploadUrlServlet.class
-com/google/sps/servlets/ForumServlet.class
-com/google/sps/servlets/DataServlet.class
