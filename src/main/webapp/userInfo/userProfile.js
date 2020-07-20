@@ -1,7 +1,7 @@
 
 function displayProfileContent() {
   fetch('/profile-data').then(response => response.json()).then((info) => {
-
+      
     document.getElementById('name').innerText = "Name: " + info["firstname"] + " " + info["lastname"];
     document.getElementById('username').innerText = "Username: " + info["username"];
     document.getElementById('email').innerText = "Email: " + info["email"];
@@ -43,6 +43,30 @@ function fillProfileContent() {
   });
 }
 
+function displaySkillContent() {
+  fetch('/skill-data').then(response => response.json()).then((info) => {
+      
+    document.getElementById('school').innerText = "School: " + info["school"];
+    document.getElementById('degree').innerText = "Degree: " + info["degree"];
+    document.getElementById('major').innerText = "Field of study: " + info["major"];
+    document.getElementById('skill').innerText = "Skill: " + info["skill"];
+    document.getElementById("experience").innerText = "Experience: " + info["experience"];
+
+  });
+}
+
+// Pre fills form input fields based on prevouis input stored in Datastore
+function fillSkillContent() {
+  fetch('/skill-data').then(response => response.json()).then((info) => {
+
+    document.getElementById('school').value = info["school"];
+    document.getElementById('degree').value = info["degree"];
+    document.getElementById('major').value = info["major"];
+    document.getElementById('skill').value = info["skill"];
+    document.getElementById('experience').value = info["experience"];
+
+  });
+}
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {

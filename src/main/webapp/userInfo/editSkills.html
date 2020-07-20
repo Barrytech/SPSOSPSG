@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Edit SEE</title>
+    <link rel="stylesheet" href="userProfile.css">
+    <script src="userProfile.js"></script>
+  </head>
+
+  <body onload="fillSkillContent();">
+
+      <nav>
+            <ul class="header">
+                <li class="header-item"> <a href="/index.html">Home</a></li>
+                <li class="header-item" id="project-item"  style=""> <a href="/projectList/projectList.html">Project</a></li>
+                <li class="header-item" id="forum-item"  style=""> <a href= "/forum/forum.html">Forum</a></li>
+                <li class="header-item" style="float:right;" id="login-header"> <a id="logout-1-a" href="">Logout</a></li>
+            </ul>
+      </nav>
+
+      <h2 style="text-align:center;">Edit Skills, Experience and Education</h2>
+      <hr style="margin-left:20px;margin-right:20px;">
+      <div style="margin-left:20px;margin-right:20px;">
+      <form id="skills-form" class="hidden" action="/skill-data" method="POST">
+          <label for="school">School:</label><br>
+          <input type="text" id="school" name="school" style="width:100%"><br>
+
+          <label for="degree">Degree:</label><br>
+          <input type="text" id="degree" name="degree" style="width:100%"><br>
+
+          <label for="major">Field of study:</label><br>
+          <input type="text" id="major" name="major" style="width:100%"><br>
+          
+          <label for="skill">Skills:</label><br>  <!-- Change later -->
+          <input type="text" id="skill" name="skill" style="width:100%"><br>
+          
+          <label for="experience">Experiences:</label><br> <!-- Change later -->
+          <input type="text" id="experience" name="experience" style="width:100%"><br>
+          
+          <input class="button" type="submit" value="Submit">
+      </form>
+      </div>
+
+  </body>
+</html>
